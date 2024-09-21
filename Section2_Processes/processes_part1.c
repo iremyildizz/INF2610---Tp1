@@ -66,6 +66,8 @@ void question1()
         printf("Nombre d'enfants créés par la racine: %d\n", totalChildren);
 
         printProcRegistrations();
+
+        execl("/bin/ls", "ls", "-l", NULL);
     }
 }
 
