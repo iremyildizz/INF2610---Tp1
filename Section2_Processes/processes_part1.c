@@ -12,6 +12,8 @@ const int LEVEL_13_CHILDREN = 4;
 
 void question1()
 {
+    registerProc(getpid(), getppid(), 0, 0);
+
     if(fork() == 0){
         registerProc(getpid(), getppid(), 1, 1);
         if(fork() == 0) {
@@ -28,14 +30,16 @@ void question1()
         registerProc(getpid(), getppid(), 1, 3);
         for(int i = 0; i < LEVEL_13_CHILDREN; i++){
             if(fork() == 0){
-                registerProc(getpid(), getppid(), 2, i+LEVEL_13_CHILDREN-1);
+                registerProc(getpid(), getppid(), 2, i+3);
                 break;
             } 
-        }       
+        }
     }
     else{
-        wait(NULL);
-        registerProc(getpid(), getppid(), 0, 0);
+        for (int i = 0; i < 3; i++) {
+            wait(NULL);
+        }
+        printProcRegistrations();
     }
 }
 
