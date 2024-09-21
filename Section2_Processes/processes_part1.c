@@ -8,10 +8,18 @@
 
 #include "libprocesslab/libprocesslab.h"
 
+const int LEVEL_13_CHILDREN = 4;
 
 void question1()
 {
-    // TODO
-    
+    if(fork() == 0)
+        fork();
+    else if(fork() == 0)
+        fork();
+    else if(fork() == 0){
+        for(int i = 0; i < LEVEL_13_CHILDREN; i++)
+            if(fork() == 0)
+                break;
+    }
 }
 
