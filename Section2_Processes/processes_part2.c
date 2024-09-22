@@ -21,15 +21,36 @@ long somme[nb];
 // fonction exécutée par chaque thread créé
 void* contribution(void*p)
 {
-    // TODO
+    long sumTotal = 0;
+    intptr_t number = (intptr_t)p;
 
-  return NULL;
+    for(int i=(number * m/nb) + 1; i <= (number + 1) * m/nb; i++) {
+        sumTotal += i;
+    }
+
+    somme[number] = sumTotal;
+    return NULL;
 }
 
 
 void question2( )
 {
-    // TODO
-    
+    long sumTotal = 0;
+    long calculationFormula = ((long)m*((long)m+1))/2;
+    pthread_t* tid = malloc (nb * sizeof(pthread_t));
+
+    for(int i=0; i <nb; i++) { 
+      pthread_create(&tid[i], NULL, contribution, (void*)(intptr_t)i);
+    }
+
+    for (int i = 0; i < nb; i++) {
+      pthread_join(tid[i], NULL);
+    }    
+
+    for (int i = 0; i < nb; i++) { 
+        sumTotal += somme[i];
+    }
+
+    printf("La somme des %d premiers nombres naturels est %ld et %ld\n", m, sumTotal, calculationFormula);
 }
 
