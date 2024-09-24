@@ -9,6 +9,14 @@
 */
 #include "challenges_part2.h"
 
+typedef struct {
+    Matrix* A;
+    Matrix* B;
+    Matrix* C;
+    int startRow;
+    int endRow;
+} ThreadArgs;
+
 short** allocateMatrix(short rows, short cols) {
     short** matrix = malloc(rows * sizeof(short*));
 
@@ -36,8 +44,30 @@ void printMatrix(Matrix* matrix) {
     }
 }
 
+void* multiplyThread(void* arguments) {
+    ThreadArgs* args = (ThreadArgs*)arguments;
+    Matrix* A = args->A;
+    Matrix* B = args->B;
+    Matrix* C = args->C;
+
+    for (int i = args->startRow; i < args->endRow; i++) {
+        for (int j = 0; j < B->cols; j++) {
+            int sum = 0;
+            for (int k = 0; k < A->cols; k++) {
+                sum += (int)A->matrix[i][k] * (int)B->matrix[k][j];
+            }
+            C->matrix[i][j] = sum;
+        }
+    }
+
+    pthread_exit(NULL);
+}
+
 Matrix* multiply(Matrix* A, Matrix* B) {
     if (A == NULL || B == NULL)
+        return NULL;
+
+    if (A->rows == 0 || A->cols == 0 || B->rows == 0 || B->cols == 0)
         return NULL;
 
     if (A->cols != B->rows)
@@ -49,15 +79,36 @@ Matrix* multiply(Matrix* A, Matrix* B) {
     C->cols = B->cols;
     C->matrix = allocateMatrix(C->rows, C->cols);
 
-    for (short i = 0; i < A->rows; i++) {
-        for (short j = 0; j < B->cols; j++) {
-            short sum = 0;
-            for (short k = 0; k < A->cols; k++) {
-                sum += A->matrix[i][k] * B->matrix[k][j];
-            }
-            C->matrix[i][j] = sum;
-        }
+    long nbThreads = sysconf(_SC_NPROCESSORS_ONLN);
+    if (nbThreads < 1)
+        nbThreads = 1;
+
+    if (nbThreads > C->rows)
+        nbThreads = C->rows;
+        
+    pthread_t* tid = malloc(nbThreads * sizeof(pthread_t));
+    ThreadArgs* args = malloc(nbThreads * sizeof(ThreadArgs));
+
+    int rowsPerThread = C->rows / nbThreads;
+    int remainingRows = C->rows % nbThreads;
+    int currentRow = 0;
+
+    for(long i = 0; i < nbThreads; i++) {
+        args[i].A = A;
+        args[i].B = B;
+        args[i].C = C;
+        args[i].startRow = currentRow;
+        args[i].endRow = currentRow + rowsPerThread + (i < remainingRows ? 1 : 0);;
+        currentRow = args[i].endRow;
+
+        pthread_create(&tid[i], NULL, multiplyThread, (void*) &args[i]);
     }
+
+    for (int i = 0; i < nbThreads; i++)
+        pthread_join(tid[i], NULL);
+
+    free(tid);
+    free(args);
 
     return C;
 }
