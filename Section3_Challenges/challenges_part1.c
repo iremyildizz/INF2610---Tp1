@@ -16,7 +16,7 @@ int isDirectory(const char* path) {
 }
 
 void writeOutput(const char* path, pid_t pid, pid_t parentPid, char** txtFiles, int txtCount) {
-    FILE* file = fopen("output.txt", "a");
+    FILE* file = fopen("challenges_output.txt", "a");
 
     fprintf(file, "Data 1: %s\n", path);
     fprintf(file, "Data 2: %d\n", (int)pid);
@@ -107,9 +107,11 @@ int main(int argc, char*argv[]) {
     const char* rootDir = "./root";
     pid_t rootPid = getpid();
 
-    if (remove("output.txt") != 0) {
-        perror("remove");
-        exit(0);
+    if (access("challenges_output.txt", F_OK) == 0) {
+        if (remove("challenges_output.txt") != 0) {
+            perror("remove");
+            exit(0);
+        }
     }
 
     totalTxtFiles = countTxtFiles(rootDir, rootPid);
