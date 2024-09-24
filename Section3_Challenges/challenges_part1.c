@@ -15,7 +15,27 @@ int isDirectory(const char* path) {
     return S_ISDIR(path_stat.st_mode);
 }
 
-int countTxtFiles(const char* path) {
+void writeOutput(const char* path, pid_t pid, pid_t parentPid, char** txtFiles, int txtCount) {
+    FILE* file = fopen("output.txt", "a");
+
+    fprintf(file, "Data 1: %s\n", path);
+    fprintf(file, "Data 2: %d\n", (int)pid);
+    fprintf(file, "Data 3: %d\n", (int)parentPid);
+    fprintf(file, "Files :\n");
+
+    if (txtCount == 0) {
+        fprintf(file, "{ Vide , car aucun fichier .txt }\n\n");
+    } else {
+        for (int i = 0; i < txtCount; i++) {
+            fprintf(file, "%s\n", txtFiles[i]);
+        }
+        fprintf(file, "\n");
+    }
+
+    fclose(file);
+}
+
+int countTxtFiles(const char* path, pid_t parentPid) {
     int txtFilesCount = 0;
     struct dirent* entry;
 
@@ -35,7 +55,7 @@ int countTxtFiles(const char* path) {
         if(strcmp(entry->d_name, ".") == 0 || strcmp(entry->d_name, "..") == 0) {
             continue;
         }
-        
+
         char newPath[MAX_PATH_LENGTH];
         snprintf(newPath, MAX_PATH_LENGTH, "%s/%s", path, entry->d_name);
 
@@ -54,6 +74,8 @@ int countTxtFiles(const char* path) {
 
     txtFilesCount += txtCount;
 
+    writeOutput(path, getpid(), parentPid, txtFiles, txtCount);
+
     for(int i = 0; i < txtCount; i++) {
         free(txtFiles[i]);
     }
@@ -63,7 +85,7 @@ int countTxtFiles(const char* path) {
         pid_t pid = fork();
 
         if(pid == 0) {
-            int subdirectoryTxtFiles = countTxtFiles(subdirectories[i]);
+            int subdirectoryTxtFiles = countTxtFiles(subdirectories[i], parentPid);
             _exit(subdirectoryTxtFiles);
         } else {
             int status;
@@ -83,8 +105,14 @@ int countTxtFiles(const char* path) {
 int main(int argc, char*argv[]) {
     int totalTxtFiles = 0;
     const char* rootDir = "./root";
+    pid_t rootPid = getpid();
 
-    totalTxtFiles = countTxtFiles(rootDir);
+    if (remove("output.txt") != 0) {
+        perror("remove");
+        exit(0);
+    }
+
+    totalTxtFiles = countTxtFiles(rootDir, rootPid);
 
     printf("Nombre de fichiers txt: %d\n", totalTxtFiles);
 

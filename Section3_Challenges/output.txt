@@ -1,0 +1,383 @@
+Data 1: ./root
+Data 2: 21074
+Data 3: 21074
+Files :
+file_2_level_1.txt
+file_1_level_1.txt
+file_4_level_1.txt
+
+Data 1: ./root/dir_0_level_1
+Data 2: 21075
+Data 3: 21074
+Files :
+file_5_level_2.txt
+file_1_level_2.txt
+
+Data 1: ./root/dir_0_level_1/dir_6_level_2
+Data 2: 21076
+Data 3: 21074
+Files :
+file_1_level_3.txt
+file_0_level_3.txt
+
+Data 1: ./root/dir_0_level_1/dir_6_level_2/dir_3_level_3
+Data 2: 21077
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_6_level_2/dir_2_level_3
+Data 2: 21078
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_3_level_2
+Data 2: 21079
+Data 3: 21074
+Files :
+{ Vide , car aucun fichier .txt }
+
+Data 1: ./root/dir_0_level_1/dir_3_level_2/dir_3_level_3
+Data 2: 21080
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_3_level_2/dir_1_level_3
+Data 2: 21081
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_3_level_2/dir_2_level_3
+Data 2: 21082
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_3_level_2/dir_0_level_3
+Data 2: 21083
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_2_level_2
+Data 2: 21084
+Data 3: 21074
+Files :
+file_3_level_3.txt
+file_4_level_3.txt
+file_0_level_3.txt
+
+Data 1: ./root/dir_0_level_1/dir_2_level_2/dir_1_level_3
+Data 2: 21085
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_2_level_2/dir_2_level_3
+Data 2: 21086
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_2_level_2/dir_5_level_3
+Data 2: 21087
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_2_level_2/dir_6_level_3
+Data 2: 21088
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_4_level_2
+Data 2: 21089
+Data 3: 21074
+Files :
+file_6_level_3.txt
+file_2_level_3.txt
+file_4_level_3.txt
+
+Data 1: ./root/dir_0_level_1/dir_4_level_2/dir_3_level_3
+Data 2: 21090
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_4_level_2/dir_1_level_3
+Data 2: 21091
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_4_level_2/dir_5_level_3
+Data 2: 21092
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_6_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_4_level_2/dir_0_level_3
+Data 2: 21093
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_6_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_0_level_2
+Data 2: 21094
+Data 3: 21074
+Files :
+file_1_level_3.txt
+file_3_level_3.txt
+file_6_level_3.txt
+file_2_level_3.txt
+file_4_level_3.txt
+
+Data 1: ./root/dir_0_level_1/dir_0_level_2/dir_5_level_3
+Data 2: 21095
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_0_level_1/dir_0_level_2/dir_0_level_3
+Data 2: 21096
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_6_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1
+Data 2: 21097
+Data 3: 21074
+Files :
+file_6_level_2.txt
+file_2_level_2.txt
+
+Data 1: ./root/dir_3_level_1/dir_1_level_2
+Data 2: 21098
+Data 3: 21074
+Files :
+file_2_level_3.txt
+file_0_level_3.txt
+
+Data 1: ./root/dir_3_level_1/dir_1_level_2/dir_3_level_3
+Data 2: 21099
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_1_level_2/dir_1_level_3
+Data 2: 21100
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_1_level_2/dir_4_level_3
+Data 2: 21101
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_3_level_2
+Data 2: 21102
+Data 3: 21074
+Files :
+file_0_level_3.txt
+
+Data 1: ./root/dir_3_level_1/dir_3_level_2/dir_3_level_3
+Data 2: 21103
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_3_level_2/dir_1_level_3
+Data 2: 21104
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_3_level_2/dir_2_level_3
+Data 2: 21105
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_3_level_2/dir_4_level_3
+Data 2: 21106
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_3_level_2/dir_5_level_3
+Data 2: 21107
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_3_level_2/dir_6_level_3
+Data 2: 21108
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_4_level_2
+Data 2: 21109
+Data 3: 21074
+Files :
+file_0_level_3.txt
+
+Data 1: ./root/dir_3_level_1/dir_4_level_2/dir_1_level_3
+Data 2: 21110
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_4_level_2/dir_2_level_3
+Data 2: 21111
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_5_level_2
+Data 2: 21112
+Data 3: 21074
+Files :
+file_1_level_3.txt
+
+Data 1: ./root/dir_3_level_1/dir_5_level_2/dir_2_level_3
+Data 2: 21113
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_5_level_2/dir_0_level_3
+Data 2: 21114
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_6_level_4.txt
+file_4_level_4.txt
+file_3_level_4.txt
+file_5_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
+Data 1: ./root/dir_3_level_1/dir_0_level_2
+Data 2: 21115
+Data 3: 21074
+Files :
+file_2_level_3.txt
+file_0_level_3.txt
+
+Data 1: ./root/dir_3_level_1/dir_0_level_2/dir_1_level_3
+Data 2: 21116
+Data 3: 21074
+Files :
+file_2_level_4.txt
+file_3_level_4.txt
+file_1_level_4.txt
+file_0_level_4.txt
+
